@@ -1,0 +1,752 @@
+--[[
+          __                   __  __ __  ____  ____ ___  _____
+   __  __/ /   ____  _________/ /_/ // /_/ __ \/ __ \__ \|__  /
+  / / / / /   / __ \/ ___/ __  /_  _  __/ / / / / / /_/ / /_ < 
+ / /_/ / /___/ /_/ / /  / /_/ /_  _  __/ /_/ / /_/ / __/___/ / 
+ \__, /_____/\____/_/   \__,_/ /_//_/  \____/\____/____/____/  
+/____/                                                         
+                   
+]]
+
+
+task.delay(5,function()
+if not LPH_OBFUSCATED then
+    LPH_JIT_MAX = function(...) return(...) end;
+    LPH_NO_VIRTUALIZE = function(...) return(...) end;
+end
+
+
+local CoreGui = game:GetService("CoreGui")
+
+
+
+local Disables = {
+    game:GetService("ScriptContext").Error,
+    game:GetService("LogService").MessageOut
+}
+
+for i, v in pairs(Disables) do
+    for i, v in pairs(getconnections(v)) do
+        v:Disable()
+    end
+end
+
+LPH_JIT_MAX(function()
+local NewArgs, NewMethod = nil,nil
+
+local old;old = hookmetamethod(game, "__namecall", function(self, ...)
+    NewMethod = getnamecallmethod()
+    
+    if NewMethod == "FireServer"  then
+    NewArgs = {...}
+    if NewArgs[2] == "AntiCheat" then
+        return wait(9e9) -- cant decompile ur shit, but suck my balls about this
+    end
+end
+
+if NewMethod == "Kick" or NewMethod == "kick" then
+
+    if getfenv(old).script.Name ~= "ClientMover" then
+        return wait(9e9)
+    end
+end
+
+
+    return old(self, ...)
+end)
+end)()
+
+
+game:GetService("Players").LocalPlayer.Idled:connect(
+        function()
+            game:GetService("VirtualUser"):ClickButton2(Vector2.new())
+        end)
+
+
+
+--//Services
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
+ 
+--Imports
+
+--//Player Variables
+local Player = Players.LocalPlayer
+local Character = Player.Character or Player.CharacterAdded:Wait()
+local PlayerParts = {}
+local Camera = Workspace.CurrentCamera
+local PlayerExploit = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Kid with shit exploit"
+local FinalString = nil
+local ChunkEncountersIds = {
+    
+    ["Flowers"] = {
+        ChunkId = "chunk15",
+        RealName = "MiscEncounter"
+    };
+
+    ["Grass"] = {
+        ChunkId = "Any",
+        RealName = "Grass"
+    };
+
+    ["Candles"] = {
+        ChunkId = "chunk13",
+        RealName = "Candle"
+    }
+}
+
+--//WebHook Variables
+local WebHookLink, NewData, ExploitRequest, FinalData = getgenv().WebHook, nil, nil, nil
+local ReportData = {
+    ["content"] = "**Y HUB** ||@".."everyone||", 
+    ["embeds"] = {
+        {
+            ["title"] = "<PBF>  Auto-finder waiting for action!",
+            ["description"] = "UserId: ".. Player.UserId.. "\nUsername: "..Player.Name.."\nDetected Exploit : "..PlayerExploit.. "\nRegistered HWID: "..game:GetService("RbxAnalyticsService"):GetClientId(),
+            ["type"] = "rich",
+            ["color"] = tonumber(0x1269da),
+            ["image"] = {
+                ["url"] = "https://cdn.dribbble.com/users/1413861/screenshots/4532760/media/22010b4b8e14f098fd032fd4b1a9e511.gif"
+ 
+            }
+        }
+    }
+ }
+ 
+--//Global Variables
+getgenv().AutoFinderStatus = false
+getgenv().GetVariations = false
+getgenv().GetShiny = false
+getgenv().ShinyMode = "Any Shiny"
+getgenv().NoClip = false
+getgenv().AutoFinderDelay = 2.68
+getgenv().WebHookNotify = false
+getgenv().InfRepel = false
+getgenv().LoterryRollback = false
+getgenv().FishingMode = false 
+getgenv().Rod = "GoodRod"
+getgenv().ChunkEncounter = "Grass"
+ 
+--//Imports
+
+--//Plugins
+local _p = {} 
+ LPH_JIT_MAX(function()
+for Index, Variable in pairs(getgc(true)) do
+    if typeof(Variable) == "table" then
+ 
+    if rawget(Variable, "currentChunk") then _p["RegionData"] = Variable end
+    if rawget(Variable, "do2v2Battle") then _p["Battle"] = Variable end
+    if rawget(Variable, "post") then _p["Events"] = Variable end
+    if rawget(Variable, "FadeIn") then _p["Utilities"] = Variable end
+    if rawget(Variable, "getARQPacket") then _p["Tools"] = Variable end
+    if rawget(Variable, "saveGame") then _p["Menu"] = Variable end
+    if rawget(Variable, "Hidden") then _p["MasterControl"] = Variable end
+    if rawget(Variable, "updateStatus") then _p["PlayerList"] = Variable end
+
+    end
+ end 
+ end)()
+ 
+--Set Player Parts
+for Index,Part in pairs(Character:GetChildren()) do
+    if Part.ClassName == "Part" or Part.ClassName == "MeshPart" then
+        table.insert(PlayerParts,Part)
+    end
+end
+ 
+--//Auto Finder
+local AutoFinder = {}
+AutoFinder.__index = AutoFinder
+ 
+function AutoFinder.new()
+    local self = {
+ 
+        PokemonName = 'Waiting for update',
+        isShiny = 'Waiting for update',
+        CaptureRate = 'Waiting for update',
+        HiddenAbility = 'Waiting for update',
+        Variation = 'Waiting for update',
+        CurrentBattle = nil,
+        Grass = nil, FishingWater = nil, OldGrass = nil, NewGrass = nil, LastGrassRoute = nil,
+        AutoFinderConnection = nil,
+        PokemonData = nil,
+        CreateBattle = "Not created yet",
+        OldEncounterChance = nil,
+        LastCall = 0, CallingBattle = false, BattleCalled = false, LastFakeWalkDirection = nil, LastFakeWalk = 0, CanGetPokemonStatus = false, FakeWalkNumber = 0, InitialFakeWalkPosition = 0,
+        TotalEncounters = 0, ShinyEncounters = 0,
+        SucessCreating = nil, Result = nil,
+        Restarting = false
+    }
+ 
+    setmetatable(self,AutoFinder)
+ 
+    return self
+end
+ 
+ 
+function AutoFinder:CanGetPokemon()
+    if self.isShiny == true and GetShiny == true then
+         
+         if ShinyMode == "Any Shiny" then
+             return true
+         end
+         
+         if ShinyMode == "WishListed Shiny" and table.find(ShinyMainWishList, self.PokemonName) then
+             return true
+         end
+         
+    end
+    return self.Variation ~= "No Variation" and GetVariations == true and true or table.find(MainWishList, self.PokemonName) and true or false
+end
+ 
+function AutoFinder:UpdateLabels()
+ 
+self.Variation = string.len(self.Variation) == 0 and "No Variation" or self.Variation
+ 
+ LabelPokemonName:UpdateLabel("Last Found: "..self.PokemonName, true)
+ LabelPokemonVariation:UpdateLabel("Variation: "..self.Variation, true)
+ LabelPokemonHiddenAbility:UpdateLabel("Ability: "..self.HiddenAbility, true)
+ LabelPokemonisShiny:UpdateLabel("Is Shiny: "..tostring(self.isShiny), true)
+ LabelPokemonCaptureRate:UpdateLabel("Capture Rate: "..self.CaptureRate, true)
+ LabelShinyEncounters:UpdateLabel("Shiny Encounters: "..self.ShinyEncounters, true)
+ LabelEncounters:UpdateLabel("Total Encounters: "..self.TotalEncounters, true)
+ 
+end
+ 
+function AutoFinder:WaitForPlayer()
+ 
+self.CurrentBattle:setupScene()
+self.CurrentBattle:focusScene()
+self.CurrentBattle:takeOver()
+ 
+repeat RunService.Stepped:Wait() until self.CurrentBattle.BattleEnded --Wait for add bindevent to remove battle
+ 
+if WebHookNotify and Webhook ~= "Empty" then AutoFinder:SendRequest() end
+ 
+self.CurrentBattle.BattleEnded:wait()
+ 
+self:CleanUpBattle()
+    --Battle clean up
+end
+ 
+function AutoFinder:UpdatePokemonInfos()
+      if self.PokemonData then
+        for Index,Var in pairs (self.PokemonData) do
+ 
+            if Index == "shiny" then self.isShiny = Var end
+            if Index == "name" then self.PokemonName = Var end
+            if Index == "captureRate" then self.CaptureRate = Var end
+            if Index == "hiddenAbility" then self.HiddenAbility = Var end
+            if Index == "forme" then self.Variation = Var end
+ 
+        end
+    end
+end
+ 
+function AutoFinder:GetCorrectString()
+    for Index,CacheSting in next, self.CurrentBattle.actionQueue do
+        if CacheSting == "|" then
+           FinalString = self.CurrentBattle.actionQueue[Index-1] --Get the encouter pokemon data
+           break
+        end
+    end
+end
+ 
+function AutoFinder:GetPokemonData()
+ 
+self:GetCorrectString()
+ 
+    self.PokemonData = _p.Tools.getTemplate(string.split(FinalString,"|")[3]:sub(6)) -- cached data |pokemonName| >> Tools >> returned pokemon data table
+    self.PokemonData["shiny"] = string.find(FinalString,"shiny") and true or false --find "shiny" string on cached data
+   return self.PokemonData
+end
+ 
+function AutoFinder:CreateEncounter()
+    self.CurrentBattle = nil
+
+    if FishingMode and self.FishingWater then
+    _p.Battle.eid = self.FishingWater.id
+ 
+     self.SucessCreating, self.Result = pcall(function()
+        self.CurrentBattle = _p.Battle:new({battleSceneType = 'Fishing'})
+        return self.CurrentBattle
+    end)
+
+    _p.Battle.currentBattle = self.CurrentBattle
+ 
+    elseif self.Grass then
+
+    _p.Battle.eid = self.Grass.id
+    
+    self.SucessCreating, self.Result = pcall(function()
+        self.CurrentBattle = _p.Battle:new()
+        return self.CurrentBattle
+    end)
+
+    _p.Battle.currentBattle = self.CurrentBattle
+
+    end            
+end
+
+ 
+function AutoFinder:Start()
+ 
+    self.InitialFakeWalkPosition = Player.Character.HumanoidRootPart.Position
+ 
+    if self.AutoFinderConnection then self.AutoFinderConnection:Disconnect() end
+ 
+    self.AutoFinderConnection = RunService.Heartbeat:Connect(function()
+
+--Fake walking
+   if self.CanGetPokemonStatus == false then
+       if os.clock() - self.LastFakeWalk >= 5 then
+           self.LastFakeWalk = os.clock()
+         
+           
+           self.FakeWalkNumber = math.random(3,5) 
+          
+            Player.Character:FindFirstChildOfClass("Humanoid"):MoveTo(self.InitialFakeWalkPosition)
+            Player.Character:FindFirstChildOfClass("Humanoid").MoveToFinished:Wait()
+               
+           for i=1,self.FakeWalkNumber do 
+          
+               if i==1 and self.LastFakeWalkDirection == 5 then
+               Player.Character:FindFirstChildOfClass("Humanoid"):MoveTo(Player.Character.HumanoidRootPart.Position + Vector3.new(-5,0,0))
+               Player.Character:FindFirstChildOfClass("Humanoid").MoveToFinished:Wait()
+               end
+          
+               Player.Character:FindFirstChildOfClass("Humanoid"):MoveTo(Player.Character.HumanoidRootPart.Position + Vector3.new(5,0,0))
+               Player.Character:FindFirstChildOfClass("Humanoid").MoveToFinished:Wait()
+               
+               Player.Character:FindFirstChildOfClass("Humanoid"):MoveTo(Player.Character.HumanoidRootPart.Position + Vector3.new(-5,0,0))
+               Player.Character:FindFirstChildOfClass("Humanoid").MoveToFinished:Wait()
+               
+               if i==self.FakeWalkNumber and self.LastFakeWalkDirection == -5 then
+                 
+               self.LastFakeWalkDirection = 5
+               
+               Player.Character:FindFirstChildOfClass("Humanoid"):MoveTo(Player.Character.HumanoidRootPart.Position + Vector3.new(5,0,0))
+               Player.Character:FindFirstChildOfClass("Humanoid").MoveToFinished:Wait()
+               
+               elseif i==self.FakeWalkNumber and self.LastFakeWalkDirection ~= -5 then
+                  
+               self.LastFakeWalkDirection = -5
+               end
+               
+           end
+           self.LastFakeWalk = os.clock()
+       end
+   end
+
+
+   if (_p.RegionData.currentChunk and _p.RegionData.currentChunk.regionData and _p.RegionData.currentChunk.regionData.Grass) then
+        self.Grass = _p.RegionData.currentChunk.regionData.Grass
+    
+    elseif not (_p.RegionData.currentChunk and _p.RegionData.currentChunk.regionData and _p.RegionData.currentChunk.regionData.Grass) and FishingMode == false then
+      LabelAutoFinderStatus:UpdateLabel("Error creating encounter: Invalid Grass", true)
+      return
+    elseif FishingMode == true and (_p.RegionData.currentChunk.regionData and _p.RegionData.currentChunk.regionData[Rod]) then
+       self.FishingWater = _p.RegionData.currentChunk.regionData[Rod]
+    end
+
+
+    if self.Restarting == false and os.clock() - self.LastCall > AutoFinderDelay and (self.Grass or self.FishingWater) and not self.CurrentBattle and self.CallingBattle == false then
+    
+    self.CallingBattle = true
+    self.LastCall = os.clock()
+    self:CreateEncounter()
+    self.BattleCalled = true
+
+    end
+
+    if self.BattleCalled == true then 
+       if self.CurrentBattle and (self.CurrentBattle and self.CurrentBattle.actionQueue and self.CurrentBattle.actionQueue[7]) then
+       self.BattleCalled = false
+
+        self.TotalEncounters = self.TotalEncounters+1
+        LabelAutoFinderStatus:UpdateLabel("Status: Encounter successfully created! <"..self.TotalEncounters..">", true)
+        
+        self.PokemonData = self:GetPokemonData()
+        self:UpdatePokemonInfos()
+        self:UpdateLabels()
+        
+
+        LabelEncounters:UpdateLabel("Total Encounters: "..self.TotalEncounters, true)
+        if self:CanGetPokemon() then
+            
+            self.CanGetPokemonStatus = true
+            
+            LabelAutoFinderStatus:UpdateLabel("Status: Waiting for player-action!", true)
+            if self.isShiny then
+                self.ShinyEncounters = self.ShinyEncounters+1
+                LabelShinyEncounters:UpdateLabel("Shiny Encounters: "..self.ShinyEncounters, true)
+            end
+                _p.Menu:disable()
+                _p.PlayerList:disable() 
+                self:WaitForPlayer()
+            else     
+                self.CurrentBattle:destroy()
+                self.BattleCalled = false
+                self.CallingBattle = false
+                self.CurrentBattle = nil
+               
+            end
+
+       elseif not self.CurrentBattle then --Battle:new() --> Possible error
+        self.BattleCalled = false
+        LabelAutoFinderStatus:UpdateLabel("Status: Error detected (Delay value too low?) <Restarting>", true)
+        
+        self.Restarting = true
+        task.wait(3.3) --Bad and lazy ideia
+        self.Restarting = false
+        self.CallingBattle = false
+
+ 
+       end
+    end
+
+end)
+end
+
+function AutoFinder:Stop()
+ 
+    if self.AutoFinderConnection then self.AutoFinderConnection:Disconnect() end 
+ 
+end
+ 
+function AutoFinder:CleanUpBattle()
+ 
+ _p.Battle.currentBattle = nil
+ 
+self.CurrentBattle:destroy() -- R.I.P.
+ 
+Camera.FieldOfView = 70
+Camera.CameraType = Enum.CameraType.Custom
+ 
+self.LastCall = os.clock() --Restart autofarm with a delay
+ 
+self.BattleCalled = false
+self.CallingBattle = false
+self.CurrentBattle = nil
+
+_p.Menu:enable()
+if _p.PlayerList.enabled then _p.PlayerList:enable() end
+                
+end
+
+function AutoFinder:CheckRegionData(Encounter)
+if not ChunkEncountersIds[Encounter] then return end
+if _p.RegionData.currentChunk.id ~= ChunkEncountersIds[Encounter].ChunkId and ChunkEncountersIds[Encounter].ChunkId ~= "Any" then return end
+
+    for Index,Region in pairs(_p.RegionData.currentChunk.regionData) do
+        if ChunkEncountersIds[Encounter].RealName == Index and _p.RegionData.currentChunk.regionData.Grass then
+       
+            if self.LastGrassRoute ~= _p.RegionData.currentChunk.id and self.LastGrassRoute ~= nil then --if new chunk
+                self.OldGrass = nil
+                self.NewGrass = nil
+            end
+        
+            if Encounter == "Grass" and self.OldGrass then
+                 _p.RegionData.currentChunk.regionData.Grass.id = self.OldGrass
+            end
+            
+            self.OldGrass =  _p.RegionData.currentChunk.regionData.Grass.id
+            self.NewGrass = Region.id
+            self.LastGrassRoute = _p.RegionData.currentChunk.id
+           
+            _p.RegionData.currentChunk.regionData.Grass.id = Region.id
+        
+            break
+        end
+    end
+    
+end
+ 
+function AutoFinder:SendRequest()
+ 
+    NewData = game:GetService("HttpService"):JSONEncode(ReportData)
+ 
+    ExploitRequest = http_request or request or HttpPost or syn.request
+    FinalData = {Url = Weebhook, Body = NewData, Method = "POST", Headers = {["content-type"] = "application/json"}}
+ 
+    ExploitRequest(FinalData)
+ 
+end
+ 
+--Metamethod call __AutoFinder
+LPH_JIT_MAX(function()
+__AutoFinder = AutoFinder.new()
+ end)()
+
+--Noclip loop
+game:GetService("RunService").Stepped:Connect(function()
+    if getgenv().NoClip == true then
+        for Index,Part in pairs(PlayerParts) do
+            Part.CanCollide = false
+        end
+    end
+end)
+ 
+game:GetService("RunService").Heartbeat:Connect(function()
+   
+    if InfRepel and _p.RegionData.currentChunk.regionData and not AutoFinderStatus then 
+        
+        if _p.RegionData.currentChunk.regionData.GrassEncounterChance ~= -1 then
+            __AutoFinder.OldEncounterChance = _p.RegionData.currentChunk.regionData.GrassEncounterChance
+        end
+        _p.RegionData.currentChunk.regionData.GrassEncounterChance = -1
+    end
+end)
+
+--AUTO FINDER
+
+local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/VisualRoblox/Roblox/main/UI-Libraries/Visual%20UI%20Library/Source.lua'))()
+ 
+local Window = Library:CreateWindow('Y Hub', "Adv Remastered (PBBR)", 'Loading | Y Hub', 'rbxassetid://402778663', false, 'VisualUIConfigs', 'Purple')
+ 
+local Tab = Window:CreateTab('Auto Finder', true, 'rbxassetid://3926305904', Vector2.new(524, 44), Vector2.new(36, 36))
+ 
+local AutoFinderSection = Tab:CreateSection('Auto Finder [Beta] !Do not use after game updates!')
+
+
+ 
+local Toggle = AutoFinderSection:CreateToggle('Enable Auto Finder', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+ 
+ 
+    AutoFinderStatus = Value
+    task.wait(0.5)
+    if Value == true then 
+        
+        Player:Move(Vector3.new(),true, true)
+        _p.MasterControl.WalkEnabled = false
+        __AutoFinder:Start()
+        
+    elseif Value == false then
+        
+         _p.MasterControl.WalkEnabled = true
+        __AutoFinder:Stop()
+        __AutoFinder:CleanUpBattle()
+       
+       LabelAutoFinderStatus:UpdateLabel("Status: __Disabled", true)
+        
+    end
+end)
+ 
+local Toggle = AutoFinderSection:CreateToggle('Get Variations', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+    GetVariations = Value
+end)
+
+
+ local AutoFinderDelayTextbox;AutoFinderDelayTextBox = AutoFinderSection:CreateTextbox('Auto Finder Delay', '2.68', function(Value)
+    if typeof(tonumber(Value)) ~= "number" then return end
+    
+    if tonumber(Value) < 1 then
+        
+        Library:CreatePrompt('TwoButton', 'Y-HUB - Security_Check', 'For your safety, values lower than "1" are not recommended, you can still use them but at your own risk!', {
+        'Confirm',
+        function()
+            AutoFinderDelay = tonumber(Value)
+        end,
+        'Cancel',
+        function()
+          return
+        end
+    })
+    
+    return
+    end			
+    
+    AutoFinderDelay = tonumber(Value)
+end)
+
+local FishingSection = Tab:CreateSection('Auto Fish')
+
+
+local Toggle = FishingSection:CreateToggle('Fishing Mode (Water needed)', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+    FishingMode = Value
+end)
+ 
+local Dropdown = FishingSection:CreateDropdown('Fishing Rod', {'Old Rod', 'Good Rod'}, 'Good Rod', 0.25, function(Value)
+    Rod = Value == "Old Rod" and "OldRod" or Value == "Good Rod" and "GoodRod"
+end)
+ 
+local ShinySection = Tab:CreateSection('Shiny Encounters')
+
+
+local Toggle = ShinySection:CreateToggle('Get Shiny', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+    GetShiny = Value
+end)
+ 
+local Dropdown = ShinySection:CreateDropdown('Shiny Mode', {'Any Shiny', 'WishListed Shiny'}, 'Any Shiny', 0.25, function(Value)
+    ShinyMode = Value
+end)
+
+
+local InfoSection = Tab:CreateSection('Encounter Info')
+
+ LabelAutoFinderStatus= InfoSection:CreateLabel('Auto Finder Status: N/A')
+ LabelPokemonName = InfoSection:CreateLabel('Last Found: N/A')
+ LabelPokemonVariation = InfoSection:CreateLabel('Variation: N/A')
+ LabelPokemonisShiny = InfoSection:CreateLabel('is Shiny: N/A')
+ LabelPokemonCaptureRate = InfoSection:CreateLabel('Capture Rate: N/A')
+ LabelPokemonHiddenAbility = InfoSection:CreateLabel('Ability: N/A')
+ LabelEncounters = InfoSection:CreateLabel('Total Encounters: N/A')
+ LabelShinyEncounters = InfoSection:CreateLabel('Total Shiny Encounters: N/A')
+ 
+ 
+ --MISC
+local MiscTab = Window:CreateTab('Misc', true, 'rbxassetid://3926305904', Vector2.new(524, 44), Vector2.new(36, 36))
+ 
+local MiscSection = MiscTab:CreateSection('Misc')
+ --[[
+local Toggle = Section:CreateToggle('Loterry Rollback', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+   getgenv().LoterryRollback = Value
+end)
+]]
+
+local Dropdown = MiscSection:CreateDropdown('Encounters-Region (Route Needed)', {'Grass','Candles','Flowers'}, 'Grass', 0.25, function(Value)
+    __AutoFinder:CheckRegionData(Value)
+end)
+
+local Toggle = MiscSection:CreateToggle('Inf Repel', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+    if Value == true then
+        __AutoFinder.OldEncounterChance = _p.RegionData.currentChunk.regionData.GrassEncounterChance 
+        InfRepel = true
+    elseif Value == false then
+        InfRepel = false
+        _p.RegionData.currentChunk.regionData.GrassEncounterChance = __AutoFinder.OldEncounterChance
+    end
+end)
+ 
+local Button = MiscSection:CreateButton('Heal Pokemons', function()
+    _p.Events:get('PDS', 'getPartyPokeBalls')
+end)
+ 
+ 
+local WebhookSection = MiscTab:CreateSection('Webhooks')
+
+local Toggle = WebhookSection:CreateToggle('Webhook-Notify', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+    WebHookNotify = Value
+end)
+ 
+ 
+local Button = WebhookSection:CreateButton('Send test Webhook-Notify', function()
+    __AutoFinder:SendRequest()
+end)
+ 
+ --LOCALPLAYER TAB
+ local PlayerTab = Window:CreateTab('Player', true, 'rbxassetid://3926305904', Vector2.new(524, 44), Vector2.new(36, 36))
+ 
+ local Section = PlayerTab:CreateSection('Player Features')
+ 
+ local WalkSpeedSlider = Section:CreateSlider('Speed Hack', 1, 75, 16, Color3.fromRGB(0, 125, 255), function(Value)
+     game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").WalkSpeed = Value
+ end)
+ 
+local Toggle = Section:CreateToggle('Noclip', false, Color3.fromRGB(0, 125, 255), 0.25, function(Value)
+    getgenv().NoClip = Value
+end)
+ 
+ 
+ 
+--CREDITS
+local Tab = Window:CreateTab('Credits', true, 'rbxassetid://3926305904', Vector2.new(524, 44), Vector2.new(36, 36))
+ 
+local Section = Tab:CreateSection('Credits')
+ 
+local Label1 = Section:CreateLabel('Features by yLord#0023 & Erste')
+local Label2 = Section:CreateLabel('Anti Cheat bypass by yLord#0023')
+local Label3 = Section:CreateLabel('UI Library by cal7')
+ 
+ 
+--CONFIG
+local LibraryFunctions = Window:CreateTab('UI Config', false, 'rbxassetid://3926305904', Vector2.new(524, 44), Vector2.new(36, 36))
+ 
+local UIFunctions = LibraryFunctions:CreateSection('UI Functions')
+ 
+local ForceEnable = UIFunctions:CreateButton('Force enable game UI', function()
+    _p.Menu:enable()
+end)
+ 
+local ToggleKeybind = UIFunctions:CreateKeybind('Toggle UI', 'E', function()
+    Library:ToggleUI()
+end)
+ 
+local TextboxKeybind = UIFunctions:CreateTextbox('Notification', 'Text', function(Value)
+    Library:CreateNotification('Notification', Value, 5)
+end)
+ 
+local TransparencySlider = UIFunctions:CreateSlider('Transparency', 0, 100, 0, Color3.fromRGB(0, 125, 255), function(Value)
+    Library:SetTransparency(Value / 100, true)
+end)
+ 
+local TextPromptButton = UIFunctions:CreateButton('Create Text Prompt', function()
+    Library:CreatePrompt('Text', 'Prompt Title', 'Prompt Text', 'Alright')
+end)
+ 
+local OneButtonPromptButton = UIFunctions:CreateButton('Create One Button Prompt', function()
+    Library:CreatePrompt('OneButton', 'Prompt Title', 'Prompt Text', {
+        'Alright',
+        function()
+ 
+        end
+    })
+end)
+ 
+local TwoButtonPromptButton = UIFunctions:CreateButton('Create Two Button Prompt', function()
+    Library:CreatePrompt('TwoButton', 'Prompt Title', 'Prompt Text', {
+        'Button 1',
+        function()
+ 
+        end,
+        'Button 2',
+        function()
+ 
+        end
+    })
+end)
+ 
+local ConfigSection = LibraryFunctions:CreateSection('Config')
+ 
+local ConfigNameString = ''
+local ConfigName = ConfigSection:CreateTextbox('Config Name', 'Input', function(Value)
+    ConfigNameString = Value
+end)
+ 
+local SaveConfigButton = ConfigSection:CreateButton('Save Config', function()
+    Library:SaveConfig(ConfigNameString)
+end)
+ 
+local SelectedConfig = ''
+local ConfigsDropdown = ConfigSection:CreateDropdown('Configs', Library:GetConfigs(), nil, 0.25, function(Value)
+    SelectedConfig = Value
+end)
+ 
+local DeleteConfigButton = ConfigSection:CreateButton('Delete Config', function()
+    Library:DeleteConfig(SelectedConfig)
+end)
+ 
+local LoadConfigButton = ConfigSection:CreateButton('Load Config', function()
+    Library:LoadConfig(SelectedConfig)
+end)
+ 
+local RefreshConfigsButton = ConfigSection:CreateButton('Refresh', function()
+    ConfigsDropdown:UpdateDropdown(Library:GetConfigs())
+end)
+ 
+local ThemesSection = LibraryFunctions:CreateSection('Themes')
+ 
+local ThemesDropdown = ThemesSection:CreateDropdown('Themes', Library:GetThemes(), nil, 0.25, function(Value)
+    Library:ChangeTheme(Value)
+end)
+ 
+local ColorSection = LibraryFunctions:CreateSection('Custom Colors')
+ 
+for Index, CurrentColor in next, Library:ReturnTheme() do
+    ColorSection:CreateColorpicker(Index, CurrentColor, 0.25, function(Color)
+        Library:ChangeColor(Index, Color)
+    end, {true})
+end
+end)
