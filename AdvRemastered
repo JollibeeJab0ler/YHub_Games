@@ -8,6 +8,10 @@
                    
 ]]
 
+getgenv().MainWishList = {"Pokemon Name","Pokemon Name"} --[[List of pokemons you wish]]
+getgenv().ShinyMainWishList = {"Pokemon Name","Pokemon Name"} --[[List of shiny pokemons you wish]]
+
+getgenv().Weebhook = "Your Discord Webhook Here" --[[AutoFinder notify (don't show it to anyone)]]
 
 task.delay(5,function()
 if not LPH_OBFUSCATED then
