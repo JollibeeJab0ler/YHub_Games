@@ -74,22 +74,6 @@ end)()
 
 
 local Func = nil
-LPH_JIT_MAX(function()
-for _,v in pairs(getgc()) do 
-    if Func ~= nil then break end
-    if type(v) == "function" then
-        if debug.getinfo(v).name == "lagout" then
-            Func = v
-        end
-    end
-end
-end)()
-
-if Func ~= nil then
-hookfunction(Func,function() end)
-elseif Func == nil then
---game.Players.LocalPlayer:Kick("<yLord> Anti-cheat update was detected, for your safety Y-Hub did not load, report it on our discord!")
-end
 
 game:GetService("Players").LocalPlayer.Idled:connect(
         function()
