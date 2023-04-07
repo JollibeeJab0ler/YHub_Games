@@ -9,8 +9,8 @@
                    
 ]]
 
-getgenv().MainWishList = {"Pokemon Name","Pokemon Name"} --[[List of pokemons you wish]]
-getgenv().ShinyMainWishList = {"Pokemon Name","Pokemon Name"} --[[List of shiny pokemons you wish]]
+getgenv().MainWishList = {"Mew","Garchomp"} --[[List of pokemons you wish]]
+getgenv().ShinyMainWishList = {"Gible","Pikachu"} --[[List of shiny pokemons you wish]]
 
 getgenv().Weebhook = "Your Discord Webhook Here" --[[AutoFinder notify (don't show it to anyone)]]
 
